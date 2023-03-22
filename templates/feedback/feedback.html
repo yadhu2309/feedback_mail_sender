@@ -1,0 +1,17 @@
+{% extends 'feedback/base.html' %}
+
+{% block content %}
+
+    <h1>How are we doing?</h1>
+    
+    <p>Please send us your feedback.</p>
+
+    <form method="post">
+        {% csrf_token %}
+        <input type='email' name='email' placeholder='Email Address' required>
+        
+        <textarea placeholder='Feedback' name='msg' style="margin-top:10px" required></textarea>
+        <input style="margin-top:10px" type="submit"/>
+    </form>
+
+{% endblock content %}
